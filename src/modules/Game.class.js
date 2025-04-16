@@ -214,16 +214,6 @@ class Game {
       return boards.map((item) => item[index]);
     });
   }
-
-  switchItems(direction) {
-    const switchedRowsToColumns = this.switchRowsToColumns(this.state);
-
-    const newBoard = switchedRowsToColumns.map((col) => {
-      return this.shiftRows(col, direction);
-    });
-
-    return newBoard;
-  }
 }
 
 module.exports = Game;
